@@ -51,3 +51,6 @@ Please avoid using third party libraries. You can use it for doing some animatio
 Tweets endpoint
 
 > https://gist.githubusercontent.com/ferdelarosa-wz/0c73ab5311c845fb7dfac4b62ab6c652/raw/6a39cffe68d87f1613f222372c62bd4e89ad06fa/tweets.json
+
+<img width="378" alt="Screen Shot 2023-05-25 at 9 04 59 PM" src="https://github.com/knnthr89/wizelineIosTestingBootcamp/assets/24879373/2ad137f2-9391-499d-80e1-7ea6e0da4f67">
+
