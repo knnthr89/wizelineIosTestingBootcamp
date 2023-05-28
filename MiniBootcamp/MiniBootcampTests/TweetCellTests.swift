@@ -18,17 +18,18 @@ final class TweetCellTests: XCTestCase {
     func test_configureCellInformation() {
         let sut = TweetCell()
         let expectedViewModel = TweetCellViewModel(
-            userName: "dummy-username",
-            profileName: "dummy-profileName",
-            profilePictureName: "cat",
-            content: "dummy-content")
+            text: "This is an example",
+            favoriteCount: 100,
+            retweetCount: 10,
+            user : TweetUser(name : "Wizeboot", screenName: "@wizeboot")
+    )
         
         sut.viewModel = expectedViewModel
         
-        XCTAssertEqual(sut.usernameLabel.text, expectedViewModel.userName)
-        XCTAssertEqual(sut.nameLabel.text, expectedViewModel.profileName)
-        XCTAssertEqual(sut.contentLabel.text, expectedViewModel.content)
-        XCTAssertEqual(sut.userImageView.image, expectedViewModel.profilePicture)
+        XCTAssertEqual(sut.nameLabel.text, expectedViewModel.user.name)
+        XCTAssertEqual(sut.usernameLabel.text, expectedViewModel.user.screenName)
+        XCTAssertEqual(sut.contentLabel.text, expectedViewModel.text)
+        XCTAssertEqual(sut.userImageView.image, UIImage(named: "cat"))
     }
 }
 

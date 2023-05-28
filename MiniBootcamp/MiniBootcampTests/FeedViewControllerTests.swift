@@ -44,7 +44,7 @@ final class FeedViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         
         let tableView = sut.tableView
-        XCTAssertEqual(1, tableView.numberOfRows(inSection: .zero))
+        XCTAssertEqual(0, tableView.numberOfRows(inSection: .zero))
     }
     
     func test_tableView_createsTweetCells() throws {
@@ -93,5 +93,44 @@ final class FeedViewControllerTests: XCTestCase {
         // Then
         let loader = sut.view.subviews.last
         XCTAssertFalse(loader is UIActivityIndicatorView)
+    }
+    
+    func test_initObserverStatusIsLoading(){
+        // Given
+        let sut = FeedViewController()
+        
+        // When
+        sut.loadViewIfNeeded()
+        
+       XCTAssertEqual(sut.viewModel.observer.value, .loading)
+
+    }
+    
+    func test_viewModelInitWithRequest() {
+        // Given
+        let sut = FeedViewController()
+        
+        // When
+        sut.loadViewIfNeeded()
+        
+        
+    }
+    
+    func test_networkRequest() {
+        // Given
+        let sut = FeedViewController()
+        
+        // When
+        sut.loadViewIfNeeded()
+        if let feedsUrl = URL(string: FeedsUrl.url.rawValue) {
+            sut.viewModel.networkManager.getFeeds(url : feedsUrl) { [weak self] result in
+                switch result {
+                case .success(let root):
+                    XCTAssertNotNil(root)
+                case .failure(let error) :
+                    XCTAssertNotNil(error)
+                }
+            }
+        }
     }
 }

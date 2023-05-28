@@ -119,20 +119,33 @@ final class TweetCell: UITableViewCell {
     }
     
     private func configureInformation() {
-        contentLabel.text = viewModel?.content
-        nameLabel.text = viewModel?.profileName
-        usernameLabel.text = viewModel?.userName
-        userImageView.image = viewModel?.profilePicture
+        contentLabel.text = viewModel?.text
+        nameLabel.text = viewModel?.user.name
+        usernameLabel.text = viewModel?.user.screenName
+        userImageView.image = UIImage(named: "cat")
+    }
+}
+struct Root : Codable {
+    let tweets : [TweetCellViewModel]
+}
+
+struct TweetCellViewModel : Codable {
+    let text : String
+    let favoriteCount : Int
+    let retweetCount : Int
+    let user : TweetUser
+    
+    enum CodingKeys: String, CodingKey {
+            case text, favoriteCount = "favorite_count", retweetCount = "retweet_count", user = "user"
     }
 }
 
-struct TweetCellViewModel {
-    let userName: String
-    let profileName: String
-    let profilePictureName: String
-    let content: String
+struct TweetUser : Codable {
+    let name: String
+    let screenName: String
+    let profilePictureName = UIImage(named: "cat")
     
-    var profilePicture: UIImage? {
-        return UIImage(named: profilePictureName)
+    enum CodingKeys : String, CodingKey {
+        case name = "name", screenName = "screen_name"//, profilePictureName = "profile_image_url"
     }
 }

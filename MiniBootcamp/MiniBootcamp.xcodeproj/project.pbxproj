@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048A3E6E2A2166B800904506 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A3E6D2A2166B800904506 /* NetworkManager.swift */; };
 		23F052AF2A15A62200447E94 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F052AE2A15A62200447E94 /* Observer.swift */; };
 		23F052B12A15AE6400447E94 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F052B02A15AE6400447E94 /* FeedViewModel.swift */; };
 		95157E592A159EFE00B9C720 /* TweetCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95157E582A159EFE00B9C720 /* TweetCellTests.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		048A3E6D2A2166B800904506 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		23F052AE2A15A62200447E94 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		23F052B02A15AE6400447E94 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		95157E582A159EFE00B9C720 /* TweetCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellTests.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		048A3E6C2A2166A000904506 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				048A3E6D2A2166B800904506 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 		953697352A0C4A790083BD2C = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 		953697402A0C4A790083BD2C /* MiniBootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				048A3E6C2A2166A000904506 /* NetworkManager */,
 				9536974F2A0C4A7C0083BD2C /* Info.plist */,
 				953697412A0C4A790083BD2C /* AppDelegate.swift */,
 				95A1E2922A0C6B9500AB700E /* FeedViewController.swift */,
@@ -222,6 +233,7 @@
 				953697422A0C4A790083BD2C /* AppDelegate.swift in Sources */,
 				23F052AF2A15A62200447E94 /* Observer.swift in Sources */,
 				95A1E2932A0C6B9500AB700E /* FeedViewController.swift in Sources */,
+				048A3E6E2A2166B800904506 /* NetworkManager.swift in Sources */,
 				953697442A0C4A790083BD2C /* SceneDelegate.swift in Sources */,
 				95A8EFEA2A157F4C002423F3 /* UIFont+Extensions.swift in Sources */,
 				95A8EFE72A157EB7002423F3 /* TweetCell.swift in Sources */,
@@ -380,6 +392,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Y97ZUEH34;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MiniBootcamp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -392,7 +405,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "wizeline-academy.MiniBootcamp";
+				PRODUCT_BUNDLE_IDENTIFIER = "kenneth-rizo.MiniBootcamp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -410,6 +423,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9Y97ZUEH34;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MiniBootcamp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -422,7 +436,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "wizeline-academy.MiniBootcamp";
+				PRODUCT_BUNDLE_IDENTIFIER = "kenneth-rizo.MiniBootcamp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
